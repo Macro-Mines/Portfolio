@@ -1,0 +1,885 @@
+:root {
+	--text-color: #fff8e6;
+	--background-color: #8d0b41;
+	--nav-links: #8d0b4190;
+	
+	--game-display: hidden;
+	--game-condition: inline-block;
+}
+
+
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+	height: auto;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.2"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+a {
+	text-decoration: none;
+	color: var(--background-color);
+}
+/* header section */
+/* ----------------------------------------------------------------- */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+	flex-wrap: wrap;
+	margin: 2%;
+	margin-top: 5%;
+}
+
+/* for portfolio */
+header > h2 {
+	margin: 0;
+	margin-right: auto;
+	transition: all 1s ease-in-out;
+}
+
+/* hover effect on portfolio text */
+header > h2:hover {
+	letter-spacing: 4px;
+}
+
+/* navigation bar */
+header > nav svg {
+	fill: var(--text-color);
+}
+
+/* side-bar container */
+.links-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	align-items: flex-start;
+	position: fixed;
+	padding: 2%;
+	padding-top: 6%;
+	top: 0;
+	right: -100%;
+	z-index: 10;
+	width: 20%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(10px);
+	font-size: 150%;
+	box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.4);
+	transition: all 0.4s ease-in-out;
+	background-image: url('data:image/svg+xml,%3Csvg width="10" height="10" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.1" fill-rule="evenodd"%3E%3Cpath d="M0 40L40 0H20L0 20M40 40V20L20 40"/%3E%3C/g%3E%3C/svg%3E');
+}
+
+/* animation for side-bar close btn */
+#close-it {
+	animation: close-it 1s linear alternate infinite;
+}
+
+/* links */
+.links-container a {
+	color: var(--text-color);
+	text-decoration: none;
+	transition: all 0.4s linear;
+}
+
+/* hover effect on links */
+.links-container a:hover {
+	font-size: 110%;
+	letter-spacing: 0.2em;
+	color: white;
+	background-color: var(--nav-links);
+}
+
+/* white box on hover over links */
+.links-container a:hover::before {
+	content: "  ";
+	height: 4px;
+	background-color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+	position: relative;
+	padding-right: 2px;
+	margin-right: 4px;
+}
+
+.links-container a:active {
+	background-color: white;
+}
+
+/* hides the checkbox */
+#sidebar-active {
+	display: none;
+}
+
+/* display the side-bar to screen */
+#sidebar-active:checked ~ .links-container {
+	right: 0;
+}
+
+/* clicking outside the side-bar closes it */
+#sidebar-active:checked ~ #overlay {
+	position: fixed;
+	width: 80%;
+	height: 100%;
+	z-index: 9;
+	top: 0;
+	left: 0;
+}
+
+/* hidden radio btns */
+.color-mode {
+	display: none;
+}
+
+/* container for color mode btns */
+.switch-color-mode {
+	display: flex;
+	justify-content: space-between;
+	gap: 1em;
+	width: auto;
+	line-height: 0;
+}
+
+/* hover effect on buttons*/
+.switch-color-mode label:hover {
+	border: 2px solid white;
+	border-radius: 20px;
+}
+
+/* COLOR MODE BTN */
+#color {
+	fill: #8d0b41;
+}
+
+/* LIGHT MODE BTN */
+#light {
+	fill: white;
+}
+
+/* DARK MODE BTN */
+#dark {
+	fill: black;
+}
+
+/* COLOR MODE */
+body:has(input[value="color"]:checked) {
+	--text-color: #fff8e6;
+	--background-color: #8d0b41;
+	--nav-links: #8d0b4190;
+}
+
+/* DARK MODE */
+body:has(input[value="dark"]:checked) {
+	--text-color: white;
+	--background-color: black;
+	--nav-links: #80808099;
+}
+
+/* LIGHT MODE */
+body:has(input[value="light"]:checked) {
+	--text-color: black;
+	--background-color: white;
+	--nav-links: black;
+	
+	--game-display: visible;
+	--game-condition: none;
+}
+/* ----------------------------------------------------------------- */
+
+/* my name section */
+/* ----------------------------------------------------------------- */
+#my-name {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	font-size: 6rem;
+	margin: 2%;
+	margin-top: 10%;
+	margin-bottom: 8%;
+	background: linear-gradient(
+		to bottom,
+		var(--background-color),
+		var(--text-color),
+		var(--background-color)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 100% 150%;
+	animation: TextGradient 5s linear alternate infinite;
+}
+
+/* animated asterik */
+#my-name svg {
+	fill: var(--text-color);
+	animation: Rotate 10s linear infinite;
+}
+
+/* ------------------------------------------------ */
+/* typerwriter container */
+.typewriter {
+	display: flex;
+	justify-content: center;
+	padding: 2%;
+}
+
+/* typerwriter effect to the paragraph */
+.typewriter p {
+	font-family: monospace;
+	font-size: 2.55rem;
+	margin: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	border-right: 1px solid white;
+	animation: typing 6s steps(15) forwards, blink 1s step-end infinite;
+	transition: background 1s ease-in-out;
+
+	background: linear-gradient(
+		to bottom,
+		var(--text-color),
+		var(--background-color)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* hover effect on the big titles */
+.typewriter p:hover {
+  background: linear-gradient(
+		to top,
+		var(--text-color),
+		var(--background-color)
+	);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ------------------------------------------------ */
+
+/* css for intro section */
+.intro-section {
+	margin: 2%;
+	margin-top: 15%;
+	text-align: justify;
+	font-size: 1rem;
+	line-height: 25px;
+}
+
+/* hiding all the checkbox */
+#intro-text-open,
+#skills-box-open,
+#projects-box-open,
+#about-text-open,
+#math-text-open,
+#creative-text-open,
+#logic-text-open,
+#generative-text-open,
+#stats-text-open {
+	display: none;
+}
+
+/* content of intro box */
+#intro-text {
+	height: 0;
+	overflow: hidden;
+	transition: all 1s linear;
+}
+
+/* opens the intro content */
+#intro-text-open:checked ~ #intro-text {
+	height: 26vh;
+}
+
+/* motion for intro open/close svg icon */
+input#intro-text-open:checked + label svg {
+	transform: rotate(-180deg);
+}
+
+/* ------------------------------------------------ */
+
+/* css for skills section */
+.skills-section {
+	margin: 2%;
+	margin-top: 10%;
+	text-align: justify;
+	font-size: 1rem;
+}
+
+/* skills content box */
+#skills-box {
+	height: 0;
+	overflow: hidden;
+	transition: all 1s linear;
+}
+
+/* opens the skills box */
+#skills-box-open:checked ~ #skills-box {
+	height: 36vh;
+}
+
+input#skills-box-open:checked + label svg {
+	transform: rotate(-180deg);
+}
+
+/* --------------------------------------------------------- */
+/* Project big title */
+#projects {
+  margin-top: 20%;
+  font-size: 4rem;
+  padding-top: 4%;
+}
+
+/* projects section */
+.projects-section {
+	margin: 2%;
+	margin-top: 5%;
+	text-align: justify;
+	font-size: 1rem;
+}
+
+/* project content div */
+#projects-box {
+	height: 0;
+	overflow: hidden;
+	transition: all 2s linear;
+}
+
+#projects-box-open:checked ~ #projects-box {
+	height: 220vh;
+}
+
+input#projects-box-open:checked + label svg {
+	transform: rotate(-180deg);
+}
+
+/* ------------------------------------------------ */
+/* general table template */
+.table-template {
+	font-size: 1.2rem;
+	margin-top: 5%;
+	border-collapse: collapse;
+	border-radius: 14px;
+	border: 1px solid var(--text-color);
+	color: var(--text-color);
+	transition: all 1s linear;
+	width: 100%;
+}
+
+.table-template td,
+.table-template th {
+	padding: 5%;
+	outline: 1px dashed var(--text-color);
+}
+
+/* transitions for skills table */
+#skills-table td {
+	transition: all 0.4s linear;
+	width: 50%;
+}
+
+#skills-table:hover td {
+	opacity: 0.5;
+}
+
+#skills-table td:hover {
+	background-color: var(--text-color);
+	color: var(--background-color);
+	font-size: 1.6rem;
+	font-weight: bold;
+	opacity: 1;
+}
+
+#skills-table td:hover::before {
+	content: "[ ";
+}
+
+#skills-table td:hover::after {
+	content: " ]";
+}
+
+
+/* transitions for projects table */
+.projects-table {
+	font-size: 1rem;
+	text-align: center;
+}
+
+.projects-table th {
+	transition: all 0.4s linear;
+	font-family: monospace;
+	animation: LetterSpacing 2s ease-in-out alternate infinite;
+}
+
+.projects-table th:hover {
+	background-color: var(--text-color);
+	color: var(--background-color);
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.projects-table th:hover::before {
+	content: "[ ";
+}
+
+.projects-table th:hover::after {
+	content: " ]";
+}
+
+/* fitting the embeded codepen */
+.projects-table #codepen {
+	padding: 0;
+	line-height: 0;
+}
+
+/* --------------------------------------------------------- */
+/* css for About section */
+.about-section {
+	margin: 2%;
+	margin-top: 15%;
+	text-align: justify;
+	font-size: 1rem;
+	line-height: 25px;
+}
+
+#about-text {
+	height: 0;
+	overflow: hidden;
+	transition: all 1s linear;
+}
+
+#about-text-open:checked ~ #about-text {
+	height: 75vh;
+}
+
+input#about-text-open:checked + label svg {
+	transform: rotate(-180deg);
+}
+
+
+/* --------------------------------------------------------- */
+/* MY ARTS big text */
+#my-arts p{
+  margin-top: 5%;
+  font-size: 4rem;
+}
+
+
+/* css for MATHS section */
+.math-section {
+  margin: 2%;
+  margin-top: 10%;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+#math-text {
+  height: 0;
+  overflow: hidden;
+  transition: all 1s linear;
+}
+
+#math-text-open:checked~#math-text {
+  height: 75vh;
+}
+
+input#math-text-open:checked+label svg {
+  transform: rotate(-180deg);
+}
+
+
+/* css for Creative-coding section */
+.creative-section {
+  margin: 2%;
+  margin-top: 20%;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+#creative-text {
+  height: 0;
+  overflow: hidden;
+  transition: all 1s linear;
+}
+
+#creative-text-open:checked~#creative-text {
+  height: 75vh;
+}
+
+input#creative-text-open:checked+label svg {
+  transform: rotate(-180deg);
+}
+
+
+
+/* css for Generative art section */
+.generative-section {
+  margin: 2%;
+  margin-top: 20%;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+#generative-text {
+  height: 0;
+  overflow: hidden;
+  transition: all 1s linear;
+}
+
+#generative-text-open:checked~#generative-text {
+  height: 75vh;
+}
+
+input#generative-text-open:checked+label svg {
+  transform: rotate(-180deg);
+}
+
+
+
+/* css for LOGIC DSIGN section */
+.logic-section {
+  margin: 2%;
+  margin-top: 20%;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+#logic-text {
+  height: 0;
+  overflow: hidden;
+  transition: all 1s linear;
+}
+
+#logic-text-open:checked~#logic-text {
+  height: 75vh;
+}
+
+input#logic-text-open:checked+label svg {
+  transform: rotate(-180deg);
+}
+
+
+
+/* css for STATISTICS section */
+.stats-section {
+  margin: 2%;
+  margin-top: 20%;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+#stats-text {
+  height: 0;
+  overflow: hidden;
+  transition: all 1s linear;
+}
+
+#stats-text-open:checked~#stats-text {
+  height: 75vh;
+}
+
+input#stats-text-open:checked+label svg {
+  transform: rotate(-180deg);
+}
+/* ------------------------------------------------ */
+
+/* cutomized mark tag */
+mark {
+	background-color: var(--text-color);
+	color: var(--background-color);
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 10px;
+	transition: all 1s ease-in-out;
+	font-weight: bold;
+}
+
+mark:hover {
+	letter-spacing: 2px;
+}
+
+/* animated marquee text */
+.marquee {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+
+.marquee span {
+	display: inline-block;
+	animation: scroll 10s linear infinite;
+	font-family: monospace;
+	color: var(--text-color);
+	font-size: 4rem;
+	background: linear-gradient(
+		to bottom,
+		var(--text-color),
+		var(--background-color)
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+/* ------------------------------------------------ */
+/* transitions for main titles headers */
+.title-header {
+	margin: 0;
+	text-underline-offset: 4px;
+	transition: all 1s ease-in-out;
+	display: inline-block;
+}
+
+/* hover effect on title headers */
+.title-header:hover {
+	letter-spacing: 2px;
+	font-size: 120%;
+}
+
+/* customized headers svg */
+.title-svg {
+	fill: var(--text-color);
+	line-height: 0;
+	margin-left: 10px;
+	position: relative;
+	top: 10px;
+	transition: all 1s linear;
+}
+
+/*wanted to use gifs but changed to -- SVG  */
+.gifs {
+	display: block;
+	line-height: 0;
+	position: relative;
+	top: 15px;
+	fill: var(--text-color);
+}
+/* ------------------------------------------------ */
+
+
+/* contact form */
+
+.contact-form-container {
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  padding: 4%;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 50;
+  letter-spacing: 1px;
+  transition: all 1s ease-in-out;
+}
+
+.contact-form h2:hover {
+  letter-spacing: 3px;
+}
+
+/* customized input fields */
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1.4px solid var(--text-color);
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--text-color);
+  resize: none;
+  letter-spacing: 2px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.8;
+  letter-spacing: 2px;
+  padding-left: 2px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  color: var(--background-color);
+  background-color: var(--text-color);
+  font-weight: bold;
+}
+
+/* contact form BUTTON */
+.contact-form button {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--background-color);
+  background-color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* not visible in LIGHT mode, as we toggle the game */
+#game-condition {
+  position: relative;
+  font-weight: bold;
+  left: 150px;
+  bottom: 20px;
+  display: var(--game-condition);
+  transform: scale(1.2);
+  margin: 0;
+  padding: 0;
+}
+
+/* position for dinosaur png */
+#dino-png {
+  position: relative;
+  line-height: 0;
+  top: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+/* DINO game iframe, visible only in LIGHT mode */
+#game {
+  margin-top: 10%;
+  visibility: var(--game-display);
+}
+
+/* --------------------------------------------------------- */
+/* FOOTER section  */
+footer p{
+  padding: 5%;
+  text-align: center;
+}
+
+
+/* colors and properties for folloe me svgs */
+footer svg {
+  fill: var(--text-color);
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+/* jump to top , fixed to screen */
+#go-home {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  z-index: 20;
+  animation: go-home 1s linear alternate infinite;
+}
+
+/* end section */
+#copyright {
+  text-align: center;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  padding: 5px;
+}
+
+/* ----------------------------------------------------------------- */
+@media (max-width: 723px) {
+	body {
+		font-size: 80%;
+	}
+
+	.links-container {
+		width: 40%;
+	}
+}
+
+@media (min-width: 450px) {
+  
+  html {
+    width: 360px;
+  }
+  body {
+    border: 1px solid var(--text-color);
+    box-sizing: border-box;
+  }
+}
+
+/* ----------------------------------------------------------------- */
+
+@keyframes LetterSpacing {
+	from {
+		letter-spacing: 2px;
+	}
+	to {
+		letter-spacing: 4px;
+	}
+}
+
+/* animation for hi section */
+@keyframes TextGradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	100% {
+		background-position: 0% 100%;
+	}
+}
+
+/* animation for asterik rotation */
+@keyframes Rotate {
+	100% {
+		transform: rotatez(360deg);
+	}
+}
+
+/* animation for side-bar close icon */
+@keyframes close-it {
+	100% {
+		transform: translatex(5px);
+	}
+}
+
+@keyframes go-home {
+  100% {
+    transform: translatey(-10px);
+  }
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+		border-right: 0px solid white;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}

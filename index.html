@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- header section -->
+<header id="home">
+	<h2>PORTFOLIO</h2>
+
+	<!-- nav box	 -->
+	<nav>
+		<input type="checkbox" id="sidebar-active">
+		<label for="sidebar-active">
+			<svg viewBox="0 0 448 512" width="25" title="bars">
+				<path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+			</svg>
+		</label>
+
+		<!-- overlay touch to close side bar	 -->
+		<label id="overlay" for="sidebar-active"></label>
+
+		<!-- 	side bar	 -->
+		<div class="links-container">
+			<label for="sidebar-active">
+				<svg id="close-it" viewBox="0 0 448 512" width="30" title="angle-double-right">
+					<path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z" />
+				</svg>
+			</label>
+
+			
+			<!-- 	nav links		 -->
+			<a href="#about">ABOUT</a>
+			<a href="#projects">PROJECTS</a>
+			<a href="#my-arts">MY ARTS</a>
+			<a href="#contact">CONTACT</a>
+			<!-- <a href="#resume">RESUME</a> -->
+
+			
+			<div class="switch-color-mode">
+				<label><input type="radio" class="color-mode" name="color-mode" value="color"><svg id="color" viewBox="0 0 512 512" width="30" title="circle">
+						<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
+					</svg></label>
+
+				<label><input type="radio" class="color-mode" name="color-mode" value="dark"><svg id="dark" viewBox="0 0 512 512" width="30" title="circle">
+						<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
+					</svg></label>
+
+				<label><input type="radio" class="color-mode" name="color-mode" value="light"><svg id="light" viewBox="0 0 512 512" width="30" title="circle">
+						<path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
+					</svg></label>
+			</div>
+		</div>
+	</nav>
+</header>
+<hr>
+
+<!-- main content -->
+<main>
+	<!-- hi section	 -->
+	
+ 	<section id="my-name">
+ 	    <span>Hi <svg viewBox="0 0 512 512" width="60" title="asterisk">
+ 	        <path d="M478.21 334.093L336 256l142.21-78.093c11.795-6.477 15.961-21.384 9.232-33.037l-19.48-33.741c-6.728-11.653-21.72-15.499-33.227-8.523L296 186.718l3.475-162.204C299.763 11.061 288.937 0 275.48 0h-38.96c-13.456 0-24.283 11.061-23.994 24.514L216 186.718 77.265 102.607c-11.506-6.976-26.499-3.13-33.227 8.523l-19.48 33.741c-6.728 11.653-2.562 26.56 9.233 33.037L176 256 33.79 334.093c-11.795 6.477-15.961 21.384-9.232 33.037l19.48 33.741c6.728 11.653 21.721 15.499 33.227 8.523L216 325.282l-3.475 162.204C212.237 500.939 223.064 512 236.52 512h38.961c13.456 0 24.283-11.061 23.995-24.514L296 325.282l138.735 84.111c11.506 6.976 26.499 3.13 33.227-8.523l19.48-33.741c6.728-11.653 2.563-26.559-9.232-33.036z" />
+ 	      </svg></span>
+ 	    I'm Abhinav
+ 	  </section>
+ 	  <hr> 
+ 	  
+ 	<div class="typewriter">
+ 	    <div><p>I am a Student</p></div>
+ 	  </div>
+ 	  
+ 	  <hr>
+ 	 
+ 	 
+ 	 <!-- INTRODUCTION section -->
+	<section class="intro-section">
+	  <img class="gifs" src="alien.png" alt="alien-png" width="35">
+			<h3 class="title-header">INTRODUCTION</h3>
+		
+		<input type="checkbox" id="intro-text-open" checked>
+		<label for="intro-text-open">
+		<svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+  <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+			</svg></label>
+		
+		<div id="intro-text">
+			<p>"Hi! I'm <b><mark>Abhinav Raj</mark></b> , a
+              passionate student currently
+              pursuing my Bachelor's degree in
+              <b>Computer Science</b>. I love
+              combining my interest in
+              coding, mathematics, and art to
+              create unique projects. Welcome
+              to my digital space where
+              i showcase my journey, skills and
+					hobbies."</p>
+		</div>
+	</section> 
+	
+	
+	<!-- SKLLS section -->
+	<section class="skills-section">
+	  <img class="gifs" src="robotics.png" alt="robotic-png" width="40">
+	  <h3 class="title-header">SKILLS AND TECHNOLOGY</h3>
+
+    <input type="checkbox" id="skills-box-open" checked>
+    <label for="skills-box-open">
+      <svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+        <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+      </svg>
+    </label>
+    
+    <div id="skills-box">
+      <table id="skills-table" class="table-template"  width="100%">
+  <tr>
+    <td>HTML</td>
+    <td>CSS</td></tr>
+
+  <tr>
+    <td>JAVA</td>
+    <td>SQL</td></tr>
+  <tr>
+    <td>C Lang</td>
+    <td>PYTHON</td></tr>
+        </table>
+    </div>
+	</section>
+	
+	
+	<div class="typewriter ">
+ 	    <div><p id="projects">Projects</p></div>
+ 	  </div>
+	
+	
+	<!-- PROJECTS section -->
+<section  class="projects-section">
+  <img class="gifs" src="coding.png" alt="coding-png" width="40">
+  <h3 class="title-header">PROJECTS AND PRACTICE</h3>
+  <input type="checkbox" id="projects-box-open" checked>
+<label for="projects-box-open">
+  <svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+    <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+  </svg>
+</label>
+  
+  <div id="projects-box">
+    <table class="table-template projects-table">
+  <tr>
+    <th>Project 1</th>
+  </tr>
+  <tr>
+    <td>
+      <h4>MY FIRST PORTFOLIO</h4>
+      <p align="justify">Created within first week of learning HTML and CSS using just basic concepts.</p>
+      <mark><a href="https://macro-mines.github.io/Portfolio01/" target="_blank" title="open portfolio">VISIT PORTFOLIO</a></mark>
+    </td>
+  </tr>
+</table>
+    
+    
+        <table class="table-template projects-table">
+      <tr>
+        <th>Project 2</th>
+      </tr>
+      <tr>
+        <td>
+          <h4>STUDENT REGISTRATION FORM</h4>
+          <ul align=" left" type="square">Language used :
+      <li>HTML</li>
+      <li>CSS</li>
+      </ul>
+      <mark><a href=" https://macro-mines.github.io/Registration-Form-/" target="_blank" title="created 1st day of HTML">VISIT PROJECT</a></mark>
+        </td>
+      </tr>
+    </table>
+
+    <table class="table-template projects-table">
+      <tr>
+        <th>Project 3</th>
+      </tr>
+      <tr>
+        <td>
+          <h4>WORKING WITH LINKED LIST</h4>
+          <ul align=" left" type="square">Language used :
+            <li>C Language</li>
+            <li>Data Structure</li>
+          </ul>
+          <mark><a href="https://github.com/Macro-Mines/DataStructureC/archive/refs/heads/main.zip">DOWNLOAD PROJECT</a></mark>
+        </td>
+      </tr>
+    </table>
+
+    <table class="table-template projects-table">
+      <tr>
+        <th>Playground</th>
+      </tr>
+      <tr>
+        <td>
+          <h4>WEB DEVELOPMENT</h4>
+          <ul align=" left" type="square">Language learning:
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td id="codepen">
+          <iframe height="300" style="width: 100%;" scrolling="no" title="Portfolio-Template" src="https://codepen.io/vdmecenn-the-bold/embed/preview/pvzJbwW?default-tab=html%2Cresult&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+            See the Pen <a href="https://codepen.io/vdmecenn-the-bold/pen/pvzJbwW">
+              Practice Project</a> by Abhinav (<a href="https://codepen.io/vdmecenn-the-bold">@vdmecenn-the-bold</a>)
+            on <a href="https://codepen.io">CodePen</a></iframe>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>
+	
+	
+	<div class="marquee">
+  <span>EAT SLEEP CODE REPEAT</span>
+</div>
+
+
+<!-- ABOUT section -->
+<section id="about" class="about-section">
+  <img class="gifs" src="about.png" alt="about-png" width="40">
+  <h3 class="title-header">ABOUT</h3>
+
+  <input type="checkbox" id="about-text-open" checked>
+  <label for="about-text-open">
+    <svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+      <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+    </svg></label>
+
+  <div id="about-text">
+    <p>"I'm a beginner level coder with experience in programming languages like
+      HTML, CSS and JAVA. I'm passionate about creating interactive and visually appealing
+      things. I'm always eager to learn new technologies and tools to enhance my skills.
+      "</p>
+    <h4>Interests :</h4>
+    <p>"<mark>Mathematics</mark> has always fascinated me.
+      I enjoy using equations to create abstract and parametric art.
+      Additiionally, <mark>Macro Phototgraphy</mark> is my hobby, allowing me to
+      explore the world through a lens and capture intricate details."</p>
+  </div>
+</section>
+	
+	
+	<!-- MY ARTS section -->
+	<div class="typewriter">
+ 	    <div id="my-arts"><p>My Arts</p></div>
+ 	  </div>
+	
+	
+	<!-- MATHS section -->
+	  <section class="math-section">
+	    <img class="gifs" src="function.png" alt="math-png" width="40">
+      <h3 class="title-header">Mathematical Arts</h3>
+
+      <input type="checkbox" id="math-text-open" checked>
+      <label for="math-text-open">
+        <svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+        <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+      </svg></label>
+	    
+	    <div id="math-text">
+      <p><i>"Check out my designs crafted from <b>mathematical equations</b>,
+        inspired by my love for patterns and logic."</i><br>
+        <mark><a href="https://www.desmos.com/" target="_blank" title="Open Desmos">DESMOS</a></mark>
+        <mark><a href="https://www.geogebra.org/" target="_blank" title="Open GeoGebra">GEOGEBRA</a></mark></p>
+      <hr>
+      
+      <table class="projects-table"> 
+        <tr>
+          <td>
+            <video controls src="math-video1.mp4" width="100%" loop></video></td>
+          <td>
+            <video controls src="math-video2.mp4" width="100%" loop></video></td>
+        </tr>
+      </table>
+
+    </div>
+  </section>
+  
+  
+  <!-- CREATIVE CODING section -->
+  <section class="creative-section">
+	    <img class="gifs" src="programmer.png" alt="math-png" width="40">
+<h3 class="title-header">Creative Coding</h3>
+
+<input type="checkbox" id="creative-text-open" checked>
+<label for="creative-text-open">
+  <svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+    <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+  </svg></label>
+	    
+	 <div id="creative-text">
+        <p><i>"A collection of interactive visuals and animations created using <b>Processing</b>,
+        blending art and code to bring abstract concepts to life."</i><br>
+        <mark><a href="https://processing.org/" target="_blank" title="Visit Processing">PROCESSING</a></mark> 
+        <mark><a href="https://p5js.org/" target="_blank" title="Visit P5.js">P5.JS</a></mark></p>
+      <hr>
+      <table class="projects-table">
+        <tr>
+          <td>
+            <video controls src="creative-video1.mp4" width="100%" loop></video></td>
+          <td>
+            <video controls src="creative-video2.mp4" width="100%" loop></video></td>
+        </tr>
+      </table>
+
+   </div>
+  </section>
+	
+	
+	
+	<!-- GENERATIVE ARTS section -->
+	<section class="generative-section">
+  <img class="gifs" src="brain.png" alt="generative-png" width="40">
+  <h3 class="title-header">Generative Arts</h3>
+
+  <input type="checkbox" id="generative-text-open" checked>
+  <label for="generative-text-open">
+    <svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+      <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+    </svg></label>
+
+  <div id="generative-text">
+        <p><i>"Exploreing the beauty of randomness and patterns through generative art
+        created with <b>node-based</b> systems"</i><br>
+      <mark><a href="https://nodes.io/" target="_blank" title="Visit NODES">NODES</a></mark>
+    </p>
+    <hr>
+    <table class="projects-table">
+      <tr>
+        <td>
+          <video controls src="generative-video1.mp4" width="100%" loop></video></td>
+        <td>
+          <video controls src="generative-video2.mp4" width="100%" loop></video></td>
+      </tr>
+    </table>
+
+  </div>
+</section>
+
+
+<!-- LOGIC DESIGN section -->
+ <section class="logic-section">
+  <img class="gifs" src="pcb-board.png" alt="logic-png" width="40">
+  <h3 class="title-header">Logic Designs</h3>
+
+  <input type="checkbox" id="logic-text-open" checked>
+  <label for="logic-text-open">
+    <svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+      <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+    </svg></label>
+
+  <div id="logic-text">
+        <p><i>"Designing and simulating <b>combinational circuits</b>
+        to explore the logical foundations of computation and hardware design."</i><br>
+      <mark><a href="https://play.google.com/store/apps/details?id=com.duracodefactory.logiccircuitsimulatorpro" target="_blank" title="Download LCS from Playstore">LOGIC.CIRCUIT.SIMULATOR</a></mark>
+      <mark><a href="https://logic.ly/demo/" target="_blank" title="Visit Logicly">LOGIC.LY</a></mark>
+    </p>
+    <hr>
+    <table class="projects-table">
+      <tr>
+        <td>
+          <video controls src="logic-video1.mp4" width="100%" loop></video></td>
+        <td>
+          <video controls src="logic-video2.mp4" width="100%" loop></video></td>
+      </tr>
+    </table>
+
+  </div>
+</section>
+ 
+ 
+ <!-- STATISTICS section -->
+ <section class="stats-section">
+  <img class="gifs" src="bar-chart.png" alt="stats-png" width="40">
+  <h3 class="title-header">Statistics</h3>
+
+  <input type="checkbox" id="stats-text-open" checked>
+  <label for="stats-text-open">
+    <svg class="title-svg" viewBox="0 0 320 512" width="20" title="angle-down">
+      <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
+    </svg></label>
+
+  <div id="stats-text">
+        <p><i>"Analysing and visualizing <b>data</b> to uncover patterns and insights
+        through statistical methods and visualizations."</i><br>
+      <mark><a href="https://www.geogebra.org/" target="_blank" title="Open GeoGebra">GEOGEBRA</a></mark></p>
+    </p>
+    <hr>
+    <table class="projects-table">
+      <tr>
+        <td>
+          <video controls src="stats-video1.mp4" width="100%" loop></video></td>
+        <td>
+          <video controls src="stats-video2.mp4" width="100%" loop></video></td>
+      </tr>
+    </table>
+
+  </div>
+</section>
+
+
+    <div class="marquee">
+      <span>"It's not a bug; it's a feature."</span>
+   </div>
+
+  
+  
+  <!-- CONTACT ME section -->
+  <section id="contact" class="contact-form-container">
+    <form class="contact-form" action="https://getform.io/f/azyydwob" method="POST"  enctype="multipart/form-data" target="_blank">
+      
+      <h2>Contact Me</h2>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+      <button type="submit">SEND</button>
+    </form>
+  </section>
+  
+  <!-- DINO GAME section -->
+  <section>
+    <iframe id="game" src="https://macro-mines.github.io/t-rex-runner/" width="100%" scrolling="no" style="border:none;"></iframe>
+    
+    <span id="game-condition">
+      <img id="dino-png" src="brachiosaurus.png" alt="dino-game" width="40"><br>
+  <label><input type="radio" class="color-mode" name="color-mode" value="light"><mark>Play DINO</mark></label>
+</span>
+  </section>
+  
+</main>
+
+<!-- FOOTER -->
+<hr>
+<footer>
+      <p>"Thank you for visiting my portfolio!
+        I hope you find it informative and inspiring.
+        Feel free to reach out if you have any questions.
+        Stay connected and let's create something amazing together!"
+        <br>
+        
+        <a href="https://www.instagram.com/macro_mines/profilecard/?igsh=bTJtOTY2cXhsejFk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="25"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-132.1z"/></svg></a>
+        
+        <a href="https://github.com/Macro-Mines">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width="25.5"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+        </a>
+        <br><br>
+        <a id="go-home" href="#home"><svg viewBox="0 0 448 512" width="25" title="arrow-up">
+  <path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z" />
+</svg></a><br>
+      </p>
+    
+    <div id="copyright">
+      &#10084 © 2024 Abhinav &#10084
+    </div>
+</footer>
+<!-- END of PORTFOLIO -->
+
+</body>
+</html>
