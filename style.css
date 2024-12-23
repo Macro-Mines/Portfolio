@@ -412,18 +412,18 @@ input#projects-box-open:checked + label svg {
 	animation: LetterSpacing 2s ease-in-out alternate infinite;
 }
 
-.projects-table th:hover {
+.projects-table:hover th {
 	background-color: var(--text-color);
 	color: var(--background-color);
 	font-size: 1.2rem;
 	font-weight: bold;
 }
 
-.projects-table th:hover::before {
+.projects-table:hover th::before {
 	content: "[ ";
 }
 
-.projects-table th:hover::after {
+.projects-table:hover th::after {
 	content: " ]";
 }
 
