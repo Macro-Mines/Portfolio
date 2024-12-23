@@ -797,6 +797,11 @@ footer svg {
   animation: go-home 1s linear alternate infinite;
 }
 
+#location {
+  text-align: center;
+  padding-bottom: 4px;
+}
+
 /* end section */
 #copyright {
   text-align: center;
