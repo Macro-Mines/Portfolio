@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    (function(){
+      emailjs.init("h7zFXUuwDD3q0hz1Z");
+    })();
+    </script>
 </head>
 <body>
 
@@ -103,7 +110,7 @@
 					hobbies."</p>
 		</div>
 	</section> 
-	
+
 	
 	<!-- SKLLS section -->
 	<section class="skills-section">
@@ -162,6 +169,13 @@
       <ul align=" left" type="square">Technology used :
             <li>HTML - CSS</li>
             <li>JAVASCRIPT</li>
+            <li>THREE.JS</li>
+            <li>LEAFLETS MAP</li>
+            <li>GOOGLE FIREBASE</li>
+            <li>NETLIFY</li>
+            <li>CHATBASE AI CHATBOT</li>
+            <li>GITHUB</li>
+            <li>PROGRESSIVE WEB APP</li>
       </ul>
       <mark><a href="https://myhostelfinder.netlify.app/" target="_blank" title="open portfolio">VISIT WEBSITE</a></mark>
     </td>
@@ -194,9 +208,9 @@
   </tr>
   <tr>
     <td>
-      <h4>MY FIRST PORTFOLIO</h4>
-      <p align="justify">Created within first week of learning HTML and CSS using just basic concepts.</p>
-      <mark><a href="https://macro-mines.github.io/Portfolio01/" target="_blank" title="open portfolio">VISIT PORTFOLIO</a></mark>
+      <h4>PYTHON GAMES</h4>
+      <p align="justify">Created Command Line GAME within first week of learning Python just using basic concepts. It has SIGN IN system with OTP and CAPTCHA features. You will love to play this game. Just download - install and RUN</p>
+      <mark><a href="https://github.com/Macro-Mines/Console-Game/releases/download/python/GameRPS.exe" target="_blank" title="open portfolio">DOWNLOAD GAME</a></mark>
     </td>
   </tr>
 </table>
@@ -422,7 +436,7 @@
   
   <!-- CONTACT ME section -->
   <section id="contact" class="contact-form-container">
-    <form class="contact-form" action="https://getform.io/f/azyydwob" method="POST"  enctype="multipart/form-data" target="_blank">
+    <form id="my-contact-form" class="contact-form">
       
       <h2>Contact Me</h2>
       <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -476,6 +490,24 @@
     </div>
 </footer>
 <!-- END of PORTFOLIO -->
+
+
+
+
+
+<script>
+    document.getElementById("my-contact-form").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent page reload
+      
+      emailjs.sendForm("service_ar2word", "template_xd6aqcu", this)
+        .then(function() {
+          alert("Message sent successfully!");
+        }, function(error) {
+          alert("Failed to send message. Please try again.");
+          console.log(error);
+        });
+    });
+  </script>
 
 </body>
 </html>
